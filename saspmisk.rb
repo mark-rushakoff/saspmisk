@@ -3,12 +3,12 @@
 # and include it in the asset generation part of your project, which you may not
 # be distributing anyhow.  But if your organization does require a different
 # license, open an issue on
-# [this project's Github page](https://github.com/mark-rushakoff/cospmisk)
+# [this project's Github page](https://github.com/mark-rushakoff/saspmisk)
 # and I'll gladly make a release under another license for you.
 
 require 'sprite_factory'
 
-module Cospmisk
+module Saspmisk
   def self.generate(opts)
     output_dir = opts[:sprite_output_dir]
     ensure_dir_exists(output_dir)
@@ -45,7 +45,7 @@ MIXIN
   end
 
   private
-  def ensure_dir_exists(dir)
+  def self.ensure_dir_exists(dir)
     Dir.mkdir(dir) unless File.exists?(dir)
   end
 end

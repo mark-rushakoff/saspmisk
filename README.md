@@ -1,6 +1,6 @@
-cospmisk
+saspmisk
 ========
 
-COmpass SPrite MIxin SKeleton
+SAss SPrite MIxin SKeleton
 
-[![Build Status](https://secure.travis-ci.org/mark-rushakoff/cospmisk.png)](http://travis-ci.org/mark-rushakoff/cospmisk)
+[![Build Status](https://secure.travis-ci.org/mark-rushakoff/saspmisk.png)](http://travis-ci.org/mark-rushakoff/saspmisk)
