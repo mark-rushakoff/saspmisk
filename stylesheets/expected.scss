@@ -1,1 +1,20 @@
-@import 'foo';
+@mixin sprite-foo-a100x100() {
+  height: 100;
+  width: 100;
+  background-image: url('foo.png');
+  background-position: 0 50;
+}
+
+@mixin sprite-foo-a200x200() {
+  height: 200;
+  width: 200;
+  background-image: url('foo.png');
+  background-position: 100 0;
+}
+
+@mixin sprite-bar-a300x300() {
+  height: 300;
+  width: 300;
+  background-image: url('bar.png');
+  background-position: 0 0;
+}
