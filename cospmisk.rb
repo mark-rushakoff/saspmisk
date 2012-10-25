@@ -2,15 +2,16 @@
 # Available under the MIT license, which means you should be able to copy this
 # and include it in the asset generation part of your project, which you may not
 # be distributing anyhow.  But if your organization does require a different
-# license, open an issue on [this project's Github page]() and I'll gladly make
-# a release under another license for you.
+# license, open an issue on
+# [this project's Github page](https://github.com/mark-rushakoff/cospmisk)
+# and I'll gladly make a release under another license for you.
 
 require 'sprite_factory'
 
 module Cospmisk
   def self.generate(opts)
     output_dir = opts[:sprite_output_dir]
-    Dir.mkdir(output_dir) unless File.exists?(output_dir)
+    ensure_dir_exists(output_dir)
 
     mixins = []
     opts[:image_dirs].each do |image_dir|
@@ -41,5 +42,10 @@ MIXIN
     File.open(opts[:mixin_path], 'w') do |f|
       f.write mixins.join("\n")
     end
+  end
+
+  private
+  def ensure_dir_exists(dir)
+    Dir.mkdir(dir) unless File.exists?(dir)
   end
 end
