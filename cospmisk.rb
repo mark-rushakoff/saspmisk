@@ -5,15 +5,17 @@
 # license, open an issue on [this project's Github page]() and I'll gladly make
 # a release under another license for you.
 
-#require 'rubygems'
 require 'sprite_factory'
 
 module Cospmisk
   def self.generate(opts)
+    output_dir = opts[:sprite_output_dir]
+    Dir.mkdir(output_dir) unless File.exists?(output_dir)
+
     mixins = []
     opts[:image_dirs].each do |image_dir|
       image_dir_name = File.basename(image_dir)
-      output_path = "#{opts[:sprite_output_dir]}/#{image_dir_name}.png"
+      output_path = "#{output_dir}/#{image_dir_name}.png"
       config = {
         :layout => :horizontal,
         :library => :chunkypng,
