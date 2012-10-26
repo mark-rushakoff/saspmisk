@@ -29,10 +29,10 @@ module Saspmisk
           info = images[image_name]
           mixins << <<-MIXIN
 @mixin sprite-#{image_dir_name}-#{image_name}() {
-  height: #{info[:cssh]};
-  width: #{info[:cssw]};
+  height: #{info[:cssh]}px;
+  width: #{info[:cssw]}px;
   background-image: url('#{File.basename(output_path)}');
-  background-position: #{info[:cssx]} #{info[:cssy]};
+  background-position: #{-info[:cssx]}px #{-info[:cssy]}px;
 }
 MIXIN
         end
